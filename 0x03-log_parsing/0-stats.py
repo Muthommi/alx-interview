@@ -19,24 +19,25 @@ try:
         line_count += 1
         parts = line.split()
 
+        if len(parts) < 7:
+            continue
+
         try:
             file_size = int(parts[-1])
             status_code = int(parts[-2])
-            if len(parts) < 7 or status_code not in status_codes:
-                continue
-
-            total_size += file_size
-            if status_code in status_codes:
-                status_codes[status_code] += 1
-
         except (ValueError, IndexError):
             continue
 
-        if line_count % 10 == 0:
-            print_metrics()
+            if status_code in status_codes:
+                total_size += file_size
+                status_codes[status_code] += 1
+
+            if line_count % 10 == 0:
+                print_metrics()
 
 except KeyboardInterrupt:
     print_metrics()
     raise
 
-print_metrics()
+if line_count > 0:
+    print_metrics()
