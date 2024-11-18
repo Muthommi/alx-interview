@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module to write a script that reads stdin line by line.
+"""
 import sys
 
 total_size = 0
