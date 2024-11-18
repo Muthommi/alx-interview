@@ -9,7 +9,7 @@ if (!movieId) {
 }
 
 // URL for starwars API
-const apiUrl = 'https://swapi-api.alx-tools.com/api/films/${movieId}';
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 request(apiUrl, (error, response, body) => {
 	if (error) {
