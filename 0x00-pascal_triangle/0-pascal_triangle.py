@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Module to a function that returns a list of integers."""
+
+
 def pascal_triangle(n):
     """
     Returns a list of lists representing Pascal's traingle of n.
