@@ -24,10 +24,10 @@ try:
                     status_counts[status_code] = 0
                 status_counts[status_code] += 1
 
-        except (Indexerror, ValueError):
+        except (IndexError, ValueError):
             continue
 
-        if line_count % 10 == 0:
+        if line_count % 10 == 0 or line_count == 1:
             print(f"File size: {total_size}")
             for code in sorted(status_counts.keys()):
                 print(f"{code}: {status_counts[code]}")
