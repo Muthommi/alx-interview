@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 def is_prime(n):
     """
     Returns: List indicating if the numbers 0-n are prime.
