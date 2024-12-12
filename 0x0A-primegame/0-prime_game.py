@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+Module to determine prime numbers in a game.
+"""
+
+
 def is_prime(n):
     """
-    Returns: List indicating if the numbers 0-n are prime.
+    Returns:
+        List indicating if the numbers 0-n are prime.
     """
     if n < 2:
         return [False] * (n + 1)
@@ -17,8 +23,8 @@ def is_prime(n):
 def isWinner(x, nums):
     """
     Determines who wins the prime game.
-    :parameter x: number of rounds.
-    :parameter nums: array of integers representing n each round.
+    :param x: number of rounds.
+    :param nums: array of integers representing n each round.
     :return: None or name of player who wins.
     """
     if not nums or x < 1:
